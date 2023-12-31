@@ -39,13 +39,13 @@
   "group/left": {
     "orientation": "horizontal",
     "modules": [
-      "cpu", "memory", "temperature" , "custom/media", "custom/cava"
+      "cpu", "memory", "temperature" , "custom/media"    
     ]
   },
   "group/right": {
     "orientation": "horizontal",
     "modules": [
-      "tray", "pulseaudio", "custom/weather", "clock", "network"
+      "custom/cava", "pulseaudio", "custom/weather", "clock", "network", "tray"
     ]
   },
   "pulseaudio": {
@@ -140,7 +140,7 @@
     "format": "{icon} {}",
     "escape": true,
     "return-type": "json",
-    "max-length": 40,
+    "max-length": 80,
     "on-click": "playerctl play-pause",
     "on-click-right": "playerctl stop",
     "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
