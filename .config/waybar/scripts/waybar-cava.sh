@@ -11,6 +11,7 @@ do
 done
 
 killall cava
+sleep 2
 cava -p ~/dotfiles/.config/cava/config-waybar | while read -r line; do
     echo $line | sed $dict
 done
