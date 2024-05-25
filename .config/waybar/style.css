@@ -4,7 +4,8 @@
 }
 
 window#waybar {
-  background: transparent; /* main window transparent background */
+  background: transparent;
+  background-color: rgba(21,22,30,0.75);
 }
 
 tooltip {
@@ -19,11 +20,11 @@ tooltip {
 .modules-left,
 .modules-center,
 .modules-right {
-  text-shadow: 1px 1px 2px black; /* text shadow, offset-x | offset-y | blur-radius | color */
-  background-color: rgba(21,22,30,0.75); /* background color */
-  margin-top: 5px; /* empty spaces around */
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4); /* pill background shadows */
-  border-radius: 5px; /* rounded corners */
+  margin: 5px 0;
+  /* background-color: rgba(21,22,30,0.75); */
+  /* box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4); */
+  /* border-radius: 5px; */
+  text-shadow: 1px 1px 2px black;
 }
 
 .modules-left {

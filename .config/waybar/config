@@ -45,7 +45,7 @@
   "group/right": {
     "orientation": "horizontal",
     "modules": [
-      "custom/cava", "pulseaudio", "custom/weather", "clock", "network", "tray", "custom/notification"
+      "custom/cava", "pulseaudio", "clock", "network", "tray", "custom/notification"
     ]
   },
   "pulseaudio": {
@@ -97,7 +97,7 @@
   "temperature": {
       "critical-threshold": 70,
       "format-critical": "{icon} {temperatureC}°C",
-      "format": "{temperatureC}°C {icon}",
+      "format": "{icon} {temperatureC}°C",
       "format-icons": ["", "", ""]
   },
   "clock": {
