@@ -2,7 +2,7 @@
   "layer": "top",
   "output": ["DP-1"],
   "modules-left": ["group/left"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-center": ["sway/workspaces"],
   "modules-right": ["group/right"],
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -33,19 +33,35 @@
       "nvim (.*)": " $1",
     },
   },
+  "sway/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": true,
+      "format": "{icon}",
+      "format-icons": {
+          "1": "",
+          "2": "",
+          "3": "",
+          "4": "",
+          "5": "",
+          "urgent": "",
+          "focused": "",
+          "default": "",
+          "high-priority-named": ["1", "2"]
+      }
+  },
   "tray": {
     "spacing": 10
   },
   "group/left": {
     "orientation": "horizontal",
     "modules": [
-      "cpu", "memory", "temperature" , "custom/media"    
+      "clock", "custom/weather"
     ]
   },
   "group/right": {
     "orientation": "horizontal",
     "modules": [
-      "custom/cava", "pulseaudio", "clock", "network", "tray", "custom/notification"
+      "pulseaudio", "network", "tray", "custom/notification"
     ]
   },
   "pulseaudio": {

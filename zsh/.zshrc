@@ -104,15 +104,19 @@ fi
 
 alias fd='fdfind'
 alias bat='batcat'
-alias vim='nvim'
-alias ls='lsd'
+alias v='nvim'
+alias c='clear'
 
-. "$HOME/.cargo/env"
-
-export PATH="$HOME/.local/share/bob/nvim-bin:$HOME/.local/bin:$PATH"
-export FZF_DEFAULT_OPTS="--layout=reverse --preview 'batcat --color=always {}' --bind='F2:toggle-preview'"
+export SDL_VIDEODRIVER=wayland
+export _JAVA_AWT_WM_NONREPARENTING=1
+export QT_QPA_PLATFORM=wayland
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_DESKTOP=sway
+export PATH="$HOME/.cargo/bin:$HOME/.local/share/bob/nvim-bin:$HOME/.local/bin:/usr/local/go/bin:$PATH"
+export FZF_DEFAULT_OPTS="--layout=reverse"
 export FZF_DEFAULT_COMMAND="fdfind --type f --hidden"
 
 bindkey -s '^F' '~/dotfiles/bin/.local/scripts/tmux-sessionizer\n'
 
 eval "$(zoxide init zsh)"
+eval "$(mise activate)"
