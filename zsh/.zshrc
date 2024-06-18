@@ -73,8 +73,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
+source <(fzf --zsh)
 
 # User configuration
 
@@ -102,10 +101,20 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias fd='fdfind'
-alias bat='batcat'
+if [[ -f /etc/os-release ]]; then
+    source /etc/os-release
+    if [[ "$ID_LIKE" == *"debian"* ]]; then
+        alias fd='fdfind'
+        alias bat='batcat'
+        export FZF_DEFAULT_COMMAND="fdfind --type f --hidden"
+    fi
+else
+    export FZF_DEFAULT_COMMAND="fd --type f --hidden"
+fi
+
 alias v='nvim'
 alias c='clear'
+alias docker-compose="docker compose"
 
 export SDL_VIDEODRIVER=wayland
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -114,7 +123,6 @@ export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_DESKTOP=sway
 export PATH="$HOME/.cargo/bin:$HOME/.local/share/bob/nvim-bin:$HOME/.local/bin:/usr/local/go/bin:$PATH"
 export FZF_DEFAULT_OPTS="--layout=reverse"
-export FZF_DEFAULT_COMMAND="fdfind --type f --hidden"
 
 bindkey -s '^F' '~/dotfiles/bin/.local/scripts/tmux-sessionizer\n'
 
