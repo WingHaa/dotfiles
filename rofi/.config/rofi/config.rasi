@@ -11,4 +11,4 @@ configuration{
     display-run: " ";
     display-window: " ";
 }
-@theme "~/dotfiles/.config/rofi/colors.rasi"
+@theme "~/.config/rofi/colors.rasi"
