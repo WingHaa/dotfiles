@@ -1,53 +1,33 @@
 {
+  "include": "~/.config/waybar/modules",
   "layer": "top",
   "output": ["DP-1"],
   "modules-left": ["group/left"],
-  "modules-center": ["sway/workspaces"],
+  "modules-center": ["hyprland/workspaces#pacman"],
   "modules-right": ["group/right"],
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "active-only": false,
-    "all-outputs": true,
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "urgent": "",
-      "default": ""
-    },
-    "sort-by-number": true
-  },
   "hyprland/window": {
     "format": "{}",
     "separate-outputs": true,
     "rewrite": {
       "(.*) — Mozilla Firefox": "🌎 $1",
       "(.*) - fish": "> [$1]",
-      "(.*) - Brave": "$1",
-      "(.*) - Chromium": "$1",
-      "(.*) - Brave Search": "$1",
-      "(.*) - Outlook": "$1",
-      "(.*) Microsoft Teams": "$1",
-      "nvim (.*)": " $1",
     },
   },
   "sway/workspaces": {
-      "disable-scroll": true,
-      "all-outputs": true,
-      "format": "{icon}",
-      "format-icons": {
-          "1": "",
-          "2": "",
-          "3": "",
-          "4": "",
-          "5": "",
-          "urgent": "",
-          "focused": "",
-          "default": "",
-          "high-priority-named": ["1", "2"]
-      }
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "urgent": "",
+      "focused": "",
+      "default": "",
+      "high-priority-named": ["1", "2"]
+    }
   },
   "tray": {
     "spacing": 10
@@ -55,7 +35,7 @@
   "group/left": {
     "orientation": "horizontal",
     "modules": [
-      "clock", "custom/weather"
+      "clock", "custom/weather", "hyprland/window",
     ]
   },
   "group/right": {
