@@ -1,10 +1,10 @@
 * {
-  font: bold 16px "JetBrainsMono NFM";
+  font: bold 18px "JetBrainsMono NFM";
   color: #c0caf5;
 }
 
 window#waybar {
-  background: black ; /* main window transparent background */
+  background: transparent ; /* main window transparent background */
 }
 
 tooltip {
@@ -16,11 +16,15 @@ tooltip {
 /* *****************************
  * modules (pills) section start
  * *****************************/
+.modules-center,
 .modules-left,
 .modules-right {
   text-shadow: 1px 1px 2px black; /* text shadow, offset-x | offset-y | blur-radius | color */
   margin: 5px 0; /* empty spaces around */
-  border-radius: 5px; /* rounded corners */
+  border-radius: 10px; /* rounded corners */
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0.8;
+  padding: 5px;
 }
 
 .modules-left {
@@ -42,6 +46,7 @@ tooltip {
 #memory,
 #temperature,
 #custom-cava,
+#custom-media,
 #temperature {
   margin: 0 10px ;
 }
