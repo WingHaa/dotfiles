@@ -1,0 +1,21 @@
+backend = "kmeans"
+color_space = "labmixed"
+palette = "dark16"
+check_contrast = true
+threshold = 11
+
+[templates]
+cava.template = 'cava'
+cava.target = '~/.config/cava/config'
+
+hypr.template = 'hyprland.conf'
+hypr.target = '~/.config/hypr/themes/wallust.conf'
+
+rofi.template = 'rofi.rasi'
+rofi.target = '~/.config/rofi/shared/colors.rasi'
+
+swaync.template = 'swaync.css'
+swaync.target = '~/.config/swaync/themes/wallust/colors-wallust.css'
+
+waybar.template = 'waybar.css'
+waybar.target = '~/.config/waybar/colors.css'

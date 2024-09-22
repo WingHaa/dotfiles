@@ -1,4 +1,4 @@
-[submodule "nvim/.config/nvim"]
+[submodule "apps/.config/nvim"]
 	path = nvim/.config/nvim
 	url = git@github.com:WingHaa/nvim-config.git
 	branch = main
