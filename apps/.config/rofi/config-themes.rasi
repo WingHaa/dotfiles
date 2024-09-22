@@ -27,17 +27,8 @@ configuration {
     scroll-method: 1;
 }
 
-/* ---- Load font ---- */
-// @import "~/.config/winghaa/settings/rofi-font.rasi"
-
 /* ---- Load pywal colors (custom wal template) ---- */
 @import "~/.config/rofi/shared/colors.rasi"
-
-/* ---- Load wallpaper ---- */
-// @import "~/.config/winghaa/cache/current_wallpaper.rasi"
-
-/* ---- Load border width ---- */
-// @import "~/.config/winghaa/settings/rofi-border.rasi"
 
 /* ---- Window ---- */
 window {
@@ -67,7 +58,7 @@ mainbox {
     spacing:                      0px;
     margin:                       0px;
     background-color:             @background;
-    // background-image:             @current-image;
+    background-image:             url("~/.config/rofi/.current_wallpaper", width);
     children:                     ["listbox"];
 }
 

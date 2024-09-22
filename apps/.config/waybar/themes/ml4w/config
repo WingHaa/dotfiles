@@ -52,6 +52,7 @@
         //"group/tools",
         "tray",
         "custom/exit",
+        "custom/swaync",
         "clock"
     ]
 }

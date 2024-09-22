@@ -273,6 +273,7 @@ window#waybar.empty #window {
  * Custom Exit
  * ----------------------------------------------------- */
 
+#custom-swaync,
 #custom-exit {
     margin: 0px 13px 0px 0px;
     padding:0px;
@@ -467,5 +468,3 @@ window#waybar.empty #window {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
 }
-
-
