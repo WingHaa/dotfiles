@@ -1,16 +1,16 @@
 * {
-  font: bold 18px "JetBrainsMono NFM";
-  color: #c0caf5;
+    font: bold 18px "JetBrainsMono NFM";
+    color: #c0caf5;
 }
 
 window#waybar {
-  background: transparent ; /* main window transparent background */
+    background: transparent; /* main window transparent background */
 }
 
 tooltip {
-  background: #15161e;
-  border: 2px solid #c0caf5;
-  border-radius: 5px;
+    background: #15161e;
+    border: 2px solid #c0caf5;
+    border-radius: 5px;
 }
 
 /* *****************************
@@ -19,20 +19,20 @@ tooltip {
 .modules-center,
 .modules-left,
 .modules-right {
-  text-shadow: 1px 1px 2px black; /* text shadow, offset-x | offset-y | blur-radius | color */
-  margin: 5px 0; /* empty spaces around */
-  border-radius: 10px; /* rounded corners */
-  background: rgba(0, 0, 0, 0.9);
-  opacity: 0.8;
-  padding: 5px;
+    text-shadow: 1px 1px 2px black; /* text shadow, offset-x | offset-y | blur-radius | color */
+    margin: 5px 0; /* empty spaces around */
+    border-radius: 10px; /* rounded corners */
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0.8;
+    padding: 5px;
 }
 
 .modules-left {
-  margin-left: 12px;
+    margin-left: 12px;
 }
 
 .modules-right {
-  margin-right: 12px;
+    margin-right: 12px;
 }
 
 #custom-launcher,
@@ -48,63 +48,63 @@ tooltip {
 #custom-cava,
 #custom-media,
 #temperature {
-  margin: 0 10px ;
+    margin: 0 10px;
 }
 
 #network,
 #cpu {
-  color: #bb9af7 
+    color: #bb9af7;
 }
 
 #custom-cava,
 #memory {
-  color: #9ece6a 
+    color: #9ece6a;
 }
 
 #custom-notification,
 #temperature {
-  color: #7dcfff
+    color: #7dcfff;
 }
 
 #custom-media,
 #pulseaudio {
-  color: #e0af68
+    color: #e0af68;
 }
 
 #clock {
-  color: #7aa2f7
+    color: #7aa2f7;
 }
 
 #custom-weather {
-  color: #f7768e
+    color: #f7768e;
 }
 
 #custom-launcher {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 #clock {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 #workspaces {
-  padding: 0px; /* remove padding around workspace module */
+    padding: 0px; /* remove padding around workspace module */
 }
 
 #workspaces button {
-  padding: 0px 4px; /* fit with pill padding, 0px for not haveing duped vertical padding, 4px to make a square (4px value from module padding: ...#clock {padding >>4px<< 10px}) */
-  border: 2px solid transparent; /* required by active workspace top color, or the bar will jitter */
-  transition-property: background-color, border-top-color; /* smooth transition for workspace module */
-  transition-duration: .1s;
+    padding: 0px 4px; /* fit with pill padding, 0px for not haveing duped vertical padding, 4px to make a square (4px value from module padding: ...#clock {padding >>4px<< 10px}) */
+    border: 2px solid transparent; /* required by active workspace top color, or the bar will jitter */
+    transition-property: background-color, border-top-color; /* smooth transition for workspace module */
+    transition-duration: 0.1s;
 }
 
 #workspaces button.active {
-  /* active workspace */
-  background: #1e1e2e; /* background color */
+    /* active workspace */
+    background: #1e1e2e; /* background color */
 }
 
 #workspaces button:hover {
-  background: #11111b; /* hovered workspace color */
+    background: #11111b; /* hovered workspace color */
 }
 
 /* ***************************

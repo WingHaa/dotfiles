@@ -1,5 +1,5 @@
 /* -----------------------------------------------------
- * Import Pywal colors 
+ * Import Pywal colors
  * ----------------------------------------------------- */
 @import '../../../colors.css';
 
@@ -12,13 +12,5 @@
 @define-color textcolor2 #000000;
 @define-color textcolor3 #000000;
 @define-color iconcolor #FFFFFF;
- 
-@import '../style.css';
- 
-#custom-ml4w-welcome {
-    background-image: url("../../assets/ml4w-icon-white.svg");
-}
 
-#custom-chatgpt {
-    background-image: url("../../assets/openai-white.svg");
-}
+@import '../style.css';

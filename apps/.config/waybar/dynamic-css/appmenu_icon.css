@@ -1,0 +1,8 @@
+#custom-appmenu_icon,
+#custom-appmenu_icon_label {
+    margin-right: 16px;
+    background-image: url("/usr/share/pixmaps/archlinux-logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-right: 18px;
+}

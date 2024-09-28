@@ -1,0 +1,33 @@
+{
+    "include": [
+        "~/.config/waybar/modules.jsonc"
+    ],
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "spacing": 4,
+    "margin-top": 10,
+    "margin-bottom": 5,
+    // Choose the order of the modules
+    "modules-left": [
+        "idle_inhibitor",
+        "pulseaudio"
+    ],
+    "modules-center": [
+        "custom/launcher",
+        "custom/media",
+        "wlr/taskbar",
+        "custom/exit"
+    ],
+    "modules-right": [
+        "custom/layout",
+        "custom/updates",
+        "custom/snip",
+        "backlight",
+        "battery",
+        "battery#bat2",
+        "network",
+        "tray",
+        "clock"
+    ]
+}

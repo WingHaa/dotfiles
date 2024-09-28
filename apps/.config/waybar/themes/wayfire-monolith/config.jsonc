@@ -1,0 +1,31 @@
+{
+    "include": [
+        "~/.config/waybar/modules.jsonc"
+    ],
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "spacing": 4,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "modules-left": [
+        "custom/launcher",
+        "wlr/taskbar"
+    ],
+    "modules-center": [
+        "custom/media"
+    ],
+    "modules-right": [
+        "backlight",
+        "battery",
+        "battery#bat2",
+        "idle_inhibitor",
+        "custom/updates",
+        "pulseaudio",
+        "custom/snip",
+        "custom/wallpaper",
+        "tray",
+        "clock",
+        "custom/exit"
+    ]
+}

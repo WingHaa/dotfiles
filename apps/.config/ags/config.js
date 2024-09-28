@@ -1,24 +1,24 @@
-//  ____  _     _      _                
-// / ___|(_) __| | ___| |__   __ _ _ __ 
+//  ____  _     _      _
+// / ___|(_) __| | ___| |__   __ _ _ __
 // \___ \| |/ _` |/ _ \ '_ \ / _` | '__|
-//  ___) | | (_| |  __/ |_) | (_| | |   
-// |____/|_|\__,_|\___|_.__/ \__,_|_|   
-//                                      
+//  ___) | | (_| |  __/ |_) | (_| | |
+// |____/|_|\__,_|\___|_.__/ \__,_|_|
+//
 
 // Set App icons
-App.addIcons(`${App.configDir}/assets`)
+App.addIcons(`${App.configDir}/assets`);
 
 // Calendar Widget
 const cld = Widget.Calendar({
     showDayNames: true,
     showDetails: false,
     showHeading: true,
-    showWeekNumbers: true,
-    className:"cld",
+    showWeekNumbers: false,
+    className: "cld",
     onDaySelected: ({ date: [y, m, d] }) => {
-        print(`${y}. ${m}. ${d}.`)
-    },    
-})
+        print(`${y}. ${m}. ${d}.`);
+    },
+});
 
 // Sidebar Box
 const Calendar = Widget.Box({
@@ -29,39 +29,37 @@ const Calendar = Widget.Box({
         Widget.Box({
             homogeneous: true,
             className: "row",
-            children:[cld],
-            css: "min-width:300px"
-        })
-    ]
-})
+            children: [cld],
+            css: "min-width:300px",
+        }),
+    ],
+});
 
 // Calendar Window
 const CalendarWindow = Widget.Window({
-    name: 'calendar',
-    className:"window",
-    anchor: ['top', 'right'],
+    name: "calendar",
+    className: "window",
+    anchor: ["top", "right"],
     // Start with hidden window, toggle with ags -t sidebar
     // visible: true,
     visible: false,
     child: Widget.Box({
-        css: 'padding: 1px;',
+        css: "padding: 1px;",
         child: Calendar,
-    })
-})
+    }),
+});
 
 // App Configuration
 let config = {
     style: "./style.css",
-    windows: [
-        CalendarWindow,
-    ],
+    windows: [CalendarWindow],
     openWindowDelay: {
-        'calendar':100,
+        calendar: 100,
     },
     closeWindowDelay: {
-        'calendar':50,
-    },    
-}
+        calendar: 50,
+    },
+};
 
 // Run AGS
-App.config(config)
+App.config(config);
