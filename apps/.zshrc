@@ -124,6 +124,9 @@ export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_DESKTOP=sway
 export PATH="$HOME/.cargo/bin:$HOME/.local/share/bob/nvim-bin:$HOME/.local/bin:/usr/local/go/bin:$PATH"
 export FZF_DEFAULT_OPTS="--layout=reverse"
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
 
 bindkey -s '^F' '~/dotfiles/bin/.local/scripts/tmux-sessionizer\n'
 
