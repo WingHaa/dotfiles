@@ -21,7 +21,7 @@
     "modules-left": [
         "custom/appmenu_icon_label",
         "custom/media",
-        "wlr/taskbar",
+        // "wlr/taskbar",
         "custom/weather",
         // "hyprland/window",
         "custom/empty"
