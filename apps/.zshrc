@@ -122,7 +122,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export QT_QPA_PLATFORM=wayland
 export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_DESKTOP=sway
-export PATH="$HOME/.cargo/bin:$HOME/.local/share/bob/nvim-bin:$HOME/.local/bin:/usr/local/go/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/.local/share/bob/nvim-bin:$HOME/.local/bin:/usr/local/go/bin:$HOME/development/flutter/bin:$HOME/Android/Sdk/cmdline-tools/latest/bin:$HOME/Android/Sdk/emulator:$PATH"
 export FZF_DEFAULT_OPTS="--ansi --highlight-line"
 export XMODIFIERS=@im=fcitx
 export GTK_IM_MODULE=fcitx
@@ -132,3 +132,17 @@ bindkey -s '^F' '~/.local/scripts/tmux-sessionizer\n'
 
 eval "$(zoxide init zsh)"
 eval "$(mise activate)"
+
+# pnpm
+export PNPM_HOME="/home/winghaa/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export ANDROID_HOME="$HOME/Android/Sdk"

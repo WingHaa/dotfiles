@@ -144,3 +144,7 @@ bind '"\C-f": "\C-a~/dotfiles/bin/.local/scripts/tmux-sessionizer\n"'
 # 	exec fish $LOGIN_OPTION
 # fi
 . "$HOME/.cargo/env"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
