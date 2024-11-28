@@ -22,6 +22,10 @@ killall waybar
 pkill waybar
 sleep 0.5
 
+killall ags
+pkill ags
+sleep 0.5
+
 # -----------------------------------------------------
 # Default theme: /THEMEFOLDER;/VARIATION
 # -----------------------------------------------------
@@ -66,3 +70,4 @@ else
 fi
 
 waybar -c ${directory}/$config_file -s ~/.config/waybar/themes${themes[1]}/$style_file &
+ags run

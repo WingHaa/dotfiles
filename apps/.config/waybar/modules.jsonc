@@ -58,7 +58,7 @@
         "on-scroll-down": "hyprctl dispatch workspace e-1",
         "show-special": false,
         "persistent-workspaces": {
-            "*": 10
+            "*": 5
         },
         "format-icons": {
             "active": "<span font='12'> 󰮯 </span>",
@@ -288,7 +288,7 @@
     // Clock
     "clock": {
         "format": "{:%H:%M %a %e}",
-        "on-click": "ags -t calendar",
+        "on-click": "ags toggle calendar",
         "tooltip": false
     },
     // System
