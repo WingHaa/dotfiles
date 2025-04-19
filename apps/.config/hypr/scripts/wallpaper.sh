@@ -74,7 +74,7 @@ main() {
   done
 
   if [[ $pic_index -ne -1 ]]; then
-    swww img -o $focused_monitor "${PICS[$pic_index]}" $SWWW_PARAMS
+    www img -o $focused_monitor "${PICS[$pic_index]}" $SWWW_PARAMS
   else
     echo "Image not found."
     exit 1
@@ -88,9 +88,6 @@ if pidof rofi > /dev/null; then
 fi
 
 main
-
-sleep 0.5
-"$SCRIPTS_DIR/wallust-swww.sh"
 
 sleep 0.5
 "$SCRIPTS_DIR/refresh.sh"

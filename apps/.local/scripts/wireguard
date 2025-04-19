@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if ! sudo -v; then
+    echo "Failed to get sudo access."
+    exit 1
+fi
+
+SELECTED=$(fzf --prompt="Select an interface: " < "$HOME/.local/scripts/wg.md")
+
+[ -z "$SELECTED" ] && exit
+
+WG_OUTPUT=$(sudo -S wg show 2>/dev/null)
+
+INTERFACE=$(echo "$WG_OUTPUT" | grep -m 1 '^interface:' | awk '{print $2}')
+
+if [ -n "$INTERFACE" ]; then
+    echo "Bringing down interface: $INTERFACE"
+    echo "$SUDOPASS" | sudo wg-quick down "$INTERFACE"
+else
+    echo "Bringing up interface: $SELECTED"
+    echo "$SUDOPASS" | sudo wg-quick up "$SELECTED"
+fi
