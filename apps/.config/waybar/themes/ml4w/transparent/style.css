@@ -1,0 +1,18 @@
+/* -----------------------------------------------------
+ * Import Pywal colors
+ * ----------------------------------------------------- */
+@import "../../../colors.css";
+
+@define-color backgroundlight transparent;
+@define-color backgrounddark transparent;
+@define-color bordercolor transparent;
+@define-color textcolor1 #e5e9f0;
+@define-color textcolor2 #e5e9f0;
+@define-color textcolor3 #e5e9f0;
+@define-color iconcolor #e5e9f0;
+
+@import "../style.css";
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.3);
+}
