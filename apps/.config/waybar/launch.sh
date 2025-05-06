@@ -69,5 +69,4 @@ else
     exit 1
 fi
 
-waybar -c ${directory}/$config_file -s ~/.config/waybar/themes${themes[1]}/$style_file &
-ags run
+uwsm-app -- waybar -c ${directory}/$config_file -s ~/.config/waybar/themes${themes[1]}/$style_file &

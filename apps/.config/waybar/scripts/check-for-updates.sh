@@ -14,7 +14,7 @@
 threshhold_green=0
 threshhold_yellow=25
 threshhold_red=100
-aur_helper="yay"
+aur_helper="paru"
 
 # -----------------------------------------------------
 # Calculate available updates
