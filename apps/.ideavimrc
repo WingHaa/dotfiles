@@ -1,0 +1,148 @@
+set NERDTree
+set ReplaceWithRegister
+set commentary
+set highlightedyank
+set mini-ai
+set surround
+let g:highlightedyank_highlight_duration = "150"
+let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
+let mapleader=" "
+
+set nu
+set relativenumber
+set scrolloff=8
+set clipboard=unnamedplus
+set ignorecase
+set smartcase
+set incsearch
+
+set ideajoin
+set ideamarks
+set idearefactormode=normal
+
+nmap s <Action>(flash.search)
+xmap s <Action>(flash.search)
+
+nmap gm <Action>(GotoSuperMethod)
+nmap gd <Action>(GotoDeclaration)
+nmap gt <Action>(GotoTypeDeclaration)
+nmap gT <Action>(GotoTest)
+nmap gR <Action>(GotoImplementation)
+nmap gr <Action>(FindUsages)
+
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapOpenRecursively='<S-l>'
+let g:NERDTreeMapCloseDir='h'
+let g:NERDTreeMapCloseChildren='<S-h'
+let g:NERDTreeMapJumpRoot='gg'
+let g:NERDTreeMapOpenSplit='s'
+let g:NERDTreeMapPreviewSplit='ps'
+let g:NERDTreeMapOpenVSplit='v'
+let g:NERDTreeMapPreviewVSplit='pv'
+let g:NERDTreeMapQuit=' e'
+map <leader>e :NERDTreeFocus<CR>
+map <leader>ne :NERDTreeToggle<CR>
+
+map <C-space>m <Action>(MaximizeEditorInSplit)
+nmap <leader>1 <Action>(GotoHarpoon1)
+nmap <leader>2 <Action>(GotoHarpoon2)
+nmap <leader>3 <Action>(GotoHarpoon3)
+nmap <leader>4 <Action>(GotoHarpoon4)
+nmap <leader>5 <Action>(GotoHarpoon5)
+nmap <leader>a <Action>(AddToHarpoon)
+nmap <leader>h <Action>(ShowHarpoon)
+
+nmap <leader>bb <Action>(PreviousTab)
+nmap <leader>bh <Action>(CloseAllToTheLeft)
+nmap <leader>bl <Action>(CloseAllToTheRight)
+nmap <leader>bn <Action>(NextTab)
+map <leader>cf <Action>(ReformatCode)
+nmap <leader>dd <Action>(ShowErrorDescription)
+nmap <leader>sf <Action>(GotoFile)
+nmap <leader>fb <Action>(RecentFiles)
+nmap <leader>fg <Action>(TextSearchAction)
+nmap <leader>fa <action>(SearchEverywhere)
+nmap <leader>st <Action>(FindInPath)
+nmap <leader>fs <Action>(ManageRecentProjects)
+
+map <Leader>ff <action>(com.mituuz.fuzzier.Fuzzier)
+map <Leader>sG <action>(com.mituuz.fuzzier.FuzzyGrep)
+map <Leader>sg <action>(com.mituuz.fuzzier.FuzzyGrepCaseInsensitive)
+
+nmap <leader>vf <Action>(ToggleFullScreen)
+
+nmap <leader>k <Action>(QuickJavaDoc)
+nmap K <Action>(ShowHoverInfo)
+
+nmap gc <Action>(CommentByLineComment)
+nmap gb <Action>(CommentByBlockComment)
+vmap gc <Action>(CommentByLineComment)<ESC>
+vmap gb <Action>(CommentByBlockComment)<ESC>
+
+nmap <C-Down> <Action>(StretchSplitToBottom)
+nmap <C-Left> <Action>(StretchSplitToLeft)
+nmap <C-Right> <Action>(StretchSplitToRight)
+nmap <C-Up> <Action>(StretchSplitToTop)
+nmap <C-i> <Action>(Forward)
+nmap <C-o> <Action>(Back)
+nmap [m <Action>(MethodUp)
+nmap ]m <Action>(MethodDown)
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+vnoremap < <gv
+vnoremap > >gv
+
+nmap <leader>lh <Action>(CallHierarchy)
+nmap <leader>lm <Action>(MethodHierarchy)
+nmap <leader>lU <Action>(ShowUmlDiagram)
+nmap <leader>so <Action>(FileStructurePopup)
+nmap <leader>wu <Action>(Unsplit)
+
+nmap <leader>rm <Action>(RunMenu)
+nmap <leader>rc <Action>(RunClass)
+nmap <leader>rn <Action>(ContextRun)
+nmap <leader>rr <Action>(Rerun)
+nmap <leader>rt <Action>(RunTests)
+nmap <leader>rf <Action>(RerunFailedTests)
+nmap <leader>rs <Action>(Stop)
+nmap <leader>rC <Action>(ChooseRunConfiguration)
+
+nmap <leader>dx <Action>(Debug)
+nmap <leader>dc <Action>(ContextDebug)
+nmap <leader>dv <Action>(ViewBreakpoints)
+nmap <leader>de <Action>(EditBreakpoint)
+nmap <leader>dm <Action>(XDebugger.MuteBreakpoints)
+nmap <leader>dt <Action>(ToggleLineBreakpoint)
+nmap <leader>dC <Action>(RunToCursor)
+nmap <leader>di <Action>(StepInto)
+nmap <leader>do <Action>(StepOver)
+nmap <leader>dr <Action>(Resume)
+nmap <leader>dR <Action>(EvaluateExpression)
+nmap <leader>dt <Action>(ActivateDebugToolWindow)
+
+nmap <leader>rC <Action>(IntroduceConstant)
+nmap <leader>rG <Action>(Generate)
+nmap <leader>rI <Action>(InspectCode)
+nmap <leader>ra <Action>(ShowIntentionActions)
+nmap <leader>rc <Action>(ChangeSignature)
+nmap <leader>re <Action>(EncapsulateFields)
+nmap <leader>rf <Action>(IntroduceField)
+nmap <leader>ri <Action>(Inline)
+nmap <leader>rl <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>rm <Action>(ExtractMethod)
+nmap <leader>rn <Action>(RenameElement)
+nmap <leader>ro <Action>(IntroduceParameterObject)
+nmap <leader>rp <Action>(IntroduceParameter)
+nmap <leader>rv <Action>(IntroduceVariable)
+
+vmap <leader>cc <Action>(me.laria.code.idea_caseconv.CamelCaseAction)
+vmap <leader>cp <Action>(me.laria.code.idea_caseconv.PascalCaseAction)
+vmap <leader>cs <Action>(me.laria.code.idea_caseconv.SnakeCaseAction)
+vmap <leader>cC <Action>(me.laria.code.idea_caseconv.ScreamingSnakeCaseAction)
+vmap <leader>ck <Action>(me.laria.code.idea_caseconv.DashCaseAction)
