@@ -18,7 +18,7 @@ set incsearch
 
 set ideajoin
 set ideamarks
-set idearefactormode=normal
+set idearefactormode=keep
 
 nmap s <Action>(flash.search)
 xmap s <Action>(flash.search)
@@ -27,8 +27,8 @@ nmap gm <Action>(GotoSuperMethod)
 nmap gd <Action>(GotoDeclaration)
 nmap gt <Action>(GotoTypeDeclaration)
 nmap gT <Action>(GotoTest)
-nmap gR <Action>(GotoImplementation)
-nmap gr <Action>(FindUsages)
+nmap gI <Action>(GotoImplementation)
+nmap gi <Action>(FindUsages)
 
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapOpenRecursively='<S-l>'
@@ -58,16 +58,12 @@ nmap <leader>bl <Action>(CloseAllToTheRight)
 nmap <leader>bn <Action>(NextTab)
 map <leader>cf <Action>(ReformatCode)
 nmap <leader>dd <Action>(ShowErrorDescription)
-nmap <leader>sf <Action>(GotoFile)
+nmap <leader>ff <Action>(GotoFile)
 nmap <leader>fb <Action>(RecentFiles)
 nmap <leader>fg <Action>(TextSearchAction)
 nmap <leader>fa <action>(SearchEverywhere)
 nmap <leader>st <Action>(FindInPath)
 nmap <leader>fs <Action>(ManageRecentProjects)
-
-map <Leader>ff <action>(com.mituuz.fuzzier.Fuzzier)
-map <Leader>sG <action>(com.mituuz.fuzzier.FuzzyGrep)
-map <Leader>sg <action>(com.mituuz.fuzzier.FuzzyGrepCaseInsensitive)
 
 nmap <leader>vf <Action>(ToggleFullScreen)
 
@@ -103,15 +99,16 @@ nmap <leader>lm <Action>(MethodHierarchy)
 nmap <leader>lU <Action>(ShowUmlDiagram)
 nmap <leader>so <Action>(FileStructurePopup)
 nmap <leader>wu <Action>(Unsplit)
+map <leader>oi <Action>(OptimizeImports)
 
-nmap <leader>rm <Action>(RunMenu)
-nmap <leader>rc <Action>(RunClass)
-nmap <leader>rn <Action>(ContextRun)
-nmap <leader>rr <Action>(Rerun)
-nmap <leader>rt <Action>(RunTests)
-nmap <leader>rf <Action>(RerunFailedTests)
-nmap <leader>rs <Action>(Stop)
-nmap <leader>rC <Action>(ChooseRunConfiguration)
+nmap <leader>tm <Action>(RunMenu)
+nmap <leader>tc <Action>(RunClass)
+nmap <leader>tn <Action>(ContextRun)
+nmap <leader>tr <Action>(Rerun)
+nmap <leader>tt <Action>(RunTests)
+nmap <leader>tf <Action>(RerunFailedTests)
+nmap <leader>ts <Action>(Stop)
+nmap <leader>tC <Action>(ChooseRunConfiguration)
 
 nmap <leader>dx <Action>(Debug)
 nmap <leader>dc <Action>(ContextDebug)
