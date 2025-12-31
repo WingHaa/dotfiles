@@ -6,13 +6,22 @@
 @define-color backgroundlight transparent;
 @define-color backgrounddark transparent;
 @define-color bordercolor transparent;
-@define-color textcolor1 #e5e9f0;
-@define-color textcolor2 #e5e9f0;
-@define-color textcolor3 #e5e9f0;
-@define-color iconcolor #e5e9f0;
+@define-color textcolor1 #ffffff;
+@define-color textcolor2 #ffffff;
+@define-color textcolor3 #ffffff;
+@define-color iconcolor #ffffff;
 
 @import "../style.css";
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(0, 0, 0, 0.3); */
 }
+
+.modules-left, .modules-right, .modules-center {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 0px 10px 0px 10px;
+    margin: 3px 17px 3px 14px;
+    opacity: 0.8;
+}
+

@@ -37,7 +37,7 @@
         //"backlight",
         "bluetooth",
         "battery",
-        "network",
+        // "network",
         "custom/wireguard",
         "tray",
         "custom/swaync",
