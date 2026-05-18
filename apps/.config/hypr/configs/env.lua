@@ -1,0 +1,10 @@
+hl.env("XCURSOR_SIZE", "24")
+hl.env("XDG_SESSION_TYPE", "wayland")
+hl.env("GTK_IM_MODULE", "fcitx")
+hl.env("QT_IM_MODULE", "fcitx")
+hl.env("XMODIFIERS", "@im=fcitx")
+
+-- hl.env("LIBVA_DRIVER_NAME", "nvidia")
+-- hl.env("GBM_BACKEND", "nvidia-drm")
+-- hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+-- hl.env("GDK_SCALE", "1.25")

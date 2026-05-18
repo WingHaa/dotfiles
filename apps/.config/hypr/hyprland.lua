@@ -1,0 +1,8 @@
+require("configs/env")
+require("configs/variable")
+require("configs/monitor")
+require("configs/startup")
+require("configs/windowrule")
+require("configs/workspacerule")
+require("configs/binds")
+require("configs/permission")
