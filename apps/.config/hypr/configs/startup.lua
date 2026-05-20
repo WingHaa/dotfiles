@@ -10,7 +10,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("uwsm app -- nm-applet")
     hl.exec_cmd("uwsm app -- fcitx5 -d --replace")
     hl.exec_cmd("uwsm app -- fcitx5-remote -r")
-    hl.exec_cmd("/home/pc007/repo/work/checkin/run-checkin.sh")
 end)
 
 -- hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
