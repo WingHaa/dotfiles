@@ -24,8 +24,8 @@ hl.bind(mod .. " + ALT + V", hl.dsp.exec_cmd(scriptsDir .. "/clipboard.sh"))
 hl.bind(mod .. " + SHIFT + P", hl.dsp.window.pin())
 
 -- Basic
-hl.bind(mod .. " + Q", hl.dsp.window.kill())
-hl.bind(mod .. " + SHIFT + Q", hl.dsp.exec_cmd("hyprctl activewindow | grep pid | tr -d 'pid:'| xargs kill"))
+hl.bind(mod .. " + Q", hl.dsp.window.close())
+hl.bind(mod .. " + SHIFT + Q", hl.dsp.window.kill())
 hl.bind(mod .. " + SHIFT + M", hl.dsp.exit())
 hl.bind(mod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mod .. " + SHIFT + F", hl.dsp.window.float({ action = "toggle" }))
