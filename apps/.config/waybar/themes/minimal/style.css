@@ -429,3 +429,35 @@ window#waybar.empty #window {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
 }
+
+/* -----------------------------------------------------
+ * Screen Recorder (wf-recorder)
+ * ----------------------------------------------------- */
+
+#custom-recorder {
+    font-family: "JetBrainsMono NFM", "JetBrainsMono Nerd Font Mono", FontAwesome,
+        sans-serif;
+    font-size: 14px;
+    color: @iconcolor;
+    border-radius: 15px;
+    margin: 10px 15px 10px 0px;
+}
+
+#custom-recorder.recording {
+    color: #dc2f2f;
+    animation-name: recblink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes recblink {
+    to {
+        color: rgba(220, 47, 47, 0.25);
+    }
+}
+
+#custom-recorder.paused {
+    color: #ff9a3c;
+}

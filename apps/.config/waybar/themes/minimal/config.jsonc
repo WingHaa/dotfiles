@@ -70,6 +70,7 @@
     // Modules Right
     "modules-right": [
         //"custom/updates",
+        "custom/recorder",
         "pulseaudio",
         //"backlight",
         "bluetooth",

@@ -280,6 +280,20 @@
             "deactivated": ""
         }
     },
+    // Screen Recorder (wf-recorder)
+    "custom/recorder": {
+        "format": "{icon}",
+        "return-type": "json",
+        "interval": 1,
+        "exec": "~/.config/waybar/scripts/wf-recorder-waybar.sh",
+        "on-click": "~/.config/waybar/scripts/wf-recorder-waybar.sh toggle",
+        "on-click-right": "~/.config/waybar/scripts/wf-recorder-waybar.sh stop",
+        "format-icons": {
+            "active": "<span font='12'> 󰮯 </span>",
+            "empty": "<span font='8'>  </span>",
+            "default": " 󰊠 "
+        }
+    },
     // System tray
     "tray": {
         "icon-size": 21,
